@@ -1,16 +1,15 @@
-function findTotalDistance(){
-    console.log(arr)
+function findTotalDistance(arr){
+    let array=[];
     let j=0;
-    for (let i=0;i+1<arr.length;i+=2){
-        let sum =Math.abs(arr[i+1]-arr[i]);
-      //  j=arr[i]
-        console.log(sum)
-        //j=arr[i];
-        //j=sumOfArray[i]
+    for (let i=0;i<arr.length-1;i++){
+        array.push(Math.abs(arr[i]-arr[i+1]));
     }
+    let Sum=array.reduce((a,b)=>a+b,0)
+    console.log(Sum);
 }
+
 let arr=[10,11,7,12,14,16]
-findTotalDistance(arr)
+findTotalDistance(arr);
 
 /* function findTotalDistance(array){
     deltas = array.map((v, i, a) => Math.abs(v - (a[i - 1] || 0)));
